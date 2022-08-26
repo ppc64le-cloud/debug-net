@@ -5,8 +5,10 @@ RUN dnf install --best --refresh -y \
       iproute \
       iptables \
       iputils \
+      lsscsi \
       mtr \
       net-tools \
+      sg3_utils \
       strace \
       tcpdump \
       traceroute \
