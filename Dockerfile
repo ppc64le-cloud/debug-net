@@ -12,6 +12,7 @@ RUN dnf install --best --refresh -y \
       strace \
       tcpdump \
       traceroute \
+      udev \
       vim-enhanced \
     && dnf clean all \
     && rm -rf /var/cache/yum \
