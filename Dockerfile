@@ -1,6 +1,6 @@
 FROM quay.io/centos/centos:stream8
 
-RUN dnf install --best --refresh -y \
+RUN dnf install --best --refresh -y 
       git \
       iproute \
       ethtool \
@@ -17,5 +17,7 @@ RUN dnf install --best --refresh -y \
       vim-enhanced \
     && dnf clean all \
     && rm -rf /var/cache/yum \
+
+COPY --chmod=777 network-snapshot.sh /usr/local/bin/network-snapshot.sh
 
 CMD ["sleep", "infinity"]
