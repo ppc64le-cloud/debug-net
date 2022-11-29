@@ -18,4 +18,7 @@ RUN dnf install --best --refresh -y \
     && dnf clean all \
     && rm -rf /var/cache/yum \
 
+COPY ./network-snapshot.sh /
+ENTRYPOINT ["/network-snapshot.sh"]
+
 CMD ["sleep", "infinity"]
