@@ -16,6 +16,8 @@ RUN dnf install --best --refresh -y \
       udev \
       vim-enhanced \
     && dnf clean all \
-    && rm -rf /var/cache/yum \
+    && rm -rf /var/cache/yum 
+
+COPY --chmod=777 network-snapshot.sh /usr/local/bin/network-snapshot.sh
 
 CMD ["sleep", "infinity"]
