@@ -15,6 +15,7 @@ RUN dnf install --best --refresh -y \
       traceroute \
       udev \
       vim-enhanced \
+      iperf3 \
     && dnf clean all \
     && rm -rf /var/cache/yum 
 
